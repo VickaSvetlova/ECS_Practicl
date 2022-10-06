@@ -5,4 +5,5 @@ using Unity.Entities;
 [BurstCompile]
 public struct PickUpTag : IComponentData
 {
+    public bool isDead;
 }

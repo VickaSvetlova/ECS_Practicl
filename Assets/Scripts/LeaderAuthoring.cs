@@ -1,7 +1,6 @@
 using Unity.Entities;
 using UnityEngine;
 
-//[RequiresEntityConversion]
 [AddComponentMenu("Custom Authoring/Leader Authoring")]
 public class LeaderAuthoring : MonoBehaviour, IConvertGameObjectToEntity
 {

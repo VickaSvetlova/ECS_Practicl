@@ -1,9 +1,7 @@
-﻿using System;
-using Unity.Entities;
+﻿using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class FollowerEntity : MonoBehaviour
 {

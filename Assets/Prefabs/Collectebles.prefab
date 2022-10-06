@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5160001945806803607}
   - component: {fileID: 6368295352883392860}
   - component: {fileID: 6506104884946650392}
-  - component: {fileID: 6325236537328362219}
   - component: {fileID: 7015239599867057183}
   - component: {fileID: -5263565566163262797}
+  - component: {fileID: 5404930547801734129}
   m_Layer: 0
   m_Name: Collectebles
   m_TagString: Untagged
@@ -282,19 +282,6 @@ MonoBehaviour:
         Tag07: 0
     m_SerializedVersion: 1
   m_SerializedVersion: 1
---- !u!114 &6325236537328362219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4419875861702043425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ConversionMode: 0
 --- !u!114 &7015239599867057183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,3 +307,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c074b86701a1e1145a8f3ac1973ecf25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5404930547801734129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4419875861702043425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConversionMode: 0

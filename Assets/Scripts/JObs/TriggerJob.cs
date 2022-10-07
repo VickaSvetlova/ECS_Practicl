@@ -19,7 +19,7 @@ struct TriggerJob : ITriggerEventsJob
         {
             ecb.DestroyEntity(entityA);
         }
-        else if (allPickups.HasComponent(entityA) && allPlayer.HasComponent(entityA))
+        else if (allPickups.HasComponent(entityB) && allPlayer.HasComponent(entityA))
         {
             ecb.DestroyEntity(entityB);
         }

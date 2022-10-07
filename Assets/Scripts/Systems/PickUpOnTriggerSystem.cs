@@ -18,25 +18,14 @@ public partial class PickUpOnTriggerSystem : SystemBase
 
     protected override void OnUpdate()
     {
-        EntityCommandBuffer entityCommandBuffer = _endEcbSystem.CreateCommandBuffer();
+        var triggerJob = new TriggerJob
+        {
+            allPickups = GetComponentDataFromEntity<PickUpTag>(true),
+            allPlayer = GetComponentDataFromEntity<PlayerTag>(),
+            ecb = _endEcbSystem.CreateCommandBuffer()
+        };
+        Dependency = triggerJob.Schedule(_stepPhysicsWorld.Simulation, Dependency);
 
-        Entities.WithAll<PickUpTag>().ForEach((Entity entity, in PickUpTag pickUp) =>
-             {
-                 if (pickUp.isDead)
-                 {
-                     entityCommandBuffer.DestroyEntity(entity);
-                 }
-             }
-         ).Schedule();
-
-        // var triggerJob = new TriggerJob
-        // {
-        //     allPickups = GetComponentDataFromEntity<PickUpTag>(true),
-        //     allPlayer = GetComponentDataFromEntity<PlayerTag>(),
-        //     ecb = _endEcbSystem.CreateCommandBuffer()
-        // };
-        // Dependency = triggerJob.Schedule(_stepPhysicsWorld.Simulation, Dependency);
-        
         _endEcbSystem.AddJobHandleForProducer(this.Dependency);
     }
 }

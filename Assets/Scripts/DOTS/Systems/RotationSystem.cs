@@ -14,6 +14,6 @@ public partial class RotationSystem : SystemBase
             rotation.Value = math.mul(rotation.Value, quaternion.RotateY(math.radians(rotationData.Speed * deltaTime)));
             rotation.Value = math.mul(rotation.Value, quaternion.RotateZ(math.radians(rotationData.Speed * deltaTime)));
 
-        }).Run();
+        }).ScheduleParallel();
     }
 }

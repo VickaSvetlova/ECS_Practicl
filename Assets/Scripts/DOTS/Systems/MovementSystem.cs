@@ -16,6 +16,6 @@ public partial class MovementSystem : SystemBase
             float2 newVel = velocity.Linear.xz;
             newVel += curInput * speedData.Speed * deltaTime;
             velocity.Linear.xz = newVel;
-        }).Run();
+        }).ScheduleParallel();
     }
 }
